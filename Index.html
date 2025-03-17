@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cartão</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-top">
+                <div class="card-title">CARTÃO</div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-wifi">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 18l.01 0" />
+                    <path d="M9.172 15.172a4 4 0 0 1 5.656 0" />
+                    <path d="M6.343 12.343a8 8 0 0 1 11.314 0" />
+                    <path d="M3.515 9.515c4.686 -4.687 12.284 -4.687 17 0" />
+                </svg>
+            </div>
+            <div class="card-center">
+                <img src="chip.png">
+            </div>
+
+            <div class="card-bottom">
+                <div class="card-bottom-left">
+                    <div class="card-number" id="card-number">0000 0000 0000 0000</div>
+                    <div id="card-expiration">00/00</div>
+                    <div style="margin-top: 10px" id="card-name">NOME DO TITULAR</div>
+                </div>
+
+                <div class="card-bottom-right">
+                    <img src="mc_sybol.png" al="---" width="130">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main">
+            <div class="text">
+                <h1>Sistema de Cartão</h1>
+            </div>
+            <div class="form">
+                <form method="post" action="">
+
+                    <div class="nomeSenha">
+                        <div>
+                            <input type="text" id="nome" name="nome" placeholder="NOME DO CARTÃO:" required>
+                        </div>
+
+                        <div>
+                            <input type="tell" id="senha" name="senha" maxlength="16" placeholder="SENHA DO CARTÃO:" required>
+                        </div>
+
+                    </div>
+
+                    <div class="cvvData">
+                        <div>
+                            <input type="date" id="data" name="data" required>
+                        </div>
+
+                        <div>
+                            <input type="tell" id="cvv" name="cvv" maxlength="3" step="1" placeholder="CVV:" required>
+                        </div>
+
+                    </div>
+
+                    <div class="numeroform">
+                        <input type="password" id="numero" name="numero" step="1" placeholder="NUMERO DO CARTÃO:" required>
+                    </div> <br>
+
+                    <div class="enviaform">
+                        <div>
+                            <input type="submit" id="envia" name="envia" value="VERIFICAR"> <br> <br>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+    @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+   
+
+    body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        color: aliceblue;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center; 
+        align-items: center;     
+        gap: 5rem;           
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 500px;
+        height: 270px;
+        background: linear-gradient(-25deg, black, #444, black);
+        border-radius: 15px;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        text-shadow: 0 2px 0 black;
+        padding: 1.5rem 2rem;
+        box-shadow: 0 10px 30px -10px black;
+    }
+
+    .card::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 100%;
+        box-shadow: 0 0 50px 10px rgba(38, 38, 38, .95) inset;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .card-top,
+    .card-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-top svg {
+        transform: rotate(90deg);
+        width: 50px;
+        height: 50px;
+    }
+
+    .card-title {
+        font-size: 1.8rem;
+        z-index: 1;
+    }
+
+    .card-center {
+        z-index: 1;
+    }
+
+    .card-center img {
+        width: 60px;
+        padding-left: 3rem;
+    }
+
+    .card-bottom-left,
+    .card-bottom-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-bottom-left {
+        gap: .7rem;
+    }
+
+    .card-number {
+        font-family: 'Exo', sans-serif;
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+    }
+
+    /* formulario */
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        padding: 10px 80px;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        box-sizing: border-box;
+        box-shadow: 0 5px 20px -10px black;
+        background-color: #444;
+    }
+
+    .text {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .text h1 {
+        font-size: 25px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }   
+
+    .nomeSenha, .cvvData {
+        margin: 0 auto;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .nomeSenha div, .cvvData div {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+   #card-name{
+    text-transform: uppercase;
+   }
+
+    .numeroform{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    input[type="text"], input[type="tell"], input[type="date"], input[type="password"] {
+        color: aliceblue;
+        margin: 0 auto;
+        height: 45px;
+        margin-top: 15px;
+        width: 18em;
+        box-sizing: border-box;
+    }
+
+    input[type="password"]{
+
+        text-align: center;
+        margin: 0 auto;
+        height: 45px;
+        margin-top: 10px;
+        width: 540px;
+    }
+
+    input{
+        outline: none;
+    }
+
+    #nome, #numero, #cvv, #data, #senha{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 3px solid #13747d;
+        background-color: transparent;
+        
+    }
+
+    #nome::placeholder, #numero::placeholder, #cvv::placeholder, #data::placeholder, #senha::placeholder{
+        color: aliceblue;
+        font-size: 18px;
+    }
+
+
+    #envia {
+        width: 100%;
+        height: 50px;
+        border-radius: 30px;
+        box-shadow: 0 10px 30px -10px black;
+        background-color: #0abfbccb;
+        font-size: 18px;
+        font-family: "Montserrat", sans-serif;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    #envia:hover {
+        background-color: #13747d;
+    }
