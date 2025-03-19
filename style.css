@@ -107,12 +107,6 @@ body {
     padding-top: 5%;
 }
 
-.text h1 {
-    font-size: 32px;
-    padding-top: 80px;
-    text-transform: uppercase;
-}
-
 .form {
     width: 100%;
     display: flex;
@@ -177,5 +171,4 @@ body {
     display: flex;
     gap: 20px;
     justify-content: center;
-    /* Adicionado para centralizar os itens */
 }
