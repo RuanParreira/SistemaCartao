@@ -28,7 +28,7 @@ body {
     border-radius: 15px;
     color: white;
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
@@ -104,6 +104,7 @@ body {
     margin-top: 220px;
     position: relative;
     z-index: 1;
+    padding-top: 5%;
 }
 
 .text h1 {
