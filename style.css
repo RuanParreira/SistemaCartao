@@ -1,204 +1,180 @@
-    @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-   
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-    body {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        color: aliceblue;
-    }
 
-    .container {
-        display: flex;
-        justify-content: center; 
-        align-items: center;     
-        gap: 5rem;           
-    }
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
-    .card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 500px;
-        height: 270px;
-        background: linear-gradient(-25deg, black, #444, black);
-        border-radius: 15px;
-        color: white;
-        position: relative;
-        overflow: hidden;
-        text-shadow: 0 2px 0 black;
-        padding: 1.5rem 2rem;
-        box-shadow: 0 10px 30px -10px black;
-    }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 80%;
+}
 
-    .card::before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 600px;
-        height: 600px;
-        border-radius: 100%;
-        box-shadow: 0 0 50px 10px rgba(38, 38, 38, .95) inset;
-        top: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 450px;
+    height: 240px;
+    background: linear-gradient(-25deg, black, #444, black);
+    border-radius: 15px;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    text-shadow: 0 2px 0 black;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 10px 30px -10px black;
+    z-index: 10;
+}
 
-    .card-top,
-    .card-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.card::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 100%;
+    box-shadow: 0 0 50px 10px rgba(38, 38, 38, .95) inset;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-    .card-top svg {
-        transform: rotate(90deg);
-        width: 50px;
-        height: 50px;
-    }
+.card-top,
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .card-title {
-        font-size: 1.8rem;
-        z-index: 1;
-    }
+.card-top svg {
+    transform: rotate(90deg);
+    width: 50px;
+    height: 50px;
+}
 
-    .card-center {
-        z-index: 1;
-    }
+.card-title {
+    font-size: 1.8rem;
+    z-index: 1;
+}
 
-    .card-center img {
-        width: 60px;
-        padding-left: 3rem;
-    }
+.card-center {
+    z-index: 1;
+}
 
-    .card-bottom-left,
-    .card-bottom-right {
-        display: flex;
-        flex-direction: column;
-    }
+.card-center img {
+    width: 60px;
+    padding-left: 3rem;
+}
 
-    .card-bottom-left {
-        gap: .7rem;
-    }
+.card-bottom-left,
+.card-bottom-right {
+    display: flex;
+    flex-direction: column;
+}
 
-    .card-number {
-        font-family: 'Exo', sans-serif;
-        font-size: 1.5rem;
-        letter-spacing: 3px;
-    }
+.card-bottom-left {
+    gap: .7rem;
+}
 
-    /* formulario */
+.card-number {
+    font-family: 'Exo', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
 
-    .main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 50%;
-        padding: 10px 80px;
-        border: 1px solid #ccc;
-        border-radius: 30px;
-        box-sizing: border-box;
-        box-shadow: 0 5px 20px -10px black;
-        background-color: #444;
-    }
+/* formulario */
 
-    .text {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 20px;
-    }
+.main {
+    text-align: center;
+    border: #1e1e1e 2px solid;
+    border-radius: 25px;
+    width: 600px;
+    margin-top: 220px;
+    position: relative;
+    z-index: 1;
+}
 
-    .text h1 {
-        font-size: 25px;
-    }
-
-    .form {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }   
-
-    .nomeSenha, .cvvData {
-        margin: 0 auto;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-
-    .nomeSenha div, .cvvData div {
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-   #card-name{
+.text h1 {
+    font-size: 32px;
+    padding-top: 80px;
     text-transform: uppercase;
-   }
+}
 
-    .numeroform{
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.form {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+}
 
+.form form {
+    width: 25em;
+}
 
-    input[type="text"], input[type="tell"], input[type="date"], input[type="password"] {
-        color: aliceblue;
-        margin: 0 auto;
-        height: 45px;
-        margin-top: 15px;
-        width: 18em;
-        box-sizing: border-box;
-    }
+.form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: .5em;
+    box-sizing: border-box;
+}
 
-    input[type="password"]{
+.form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: .5em;
+    box-sizing: border-box;
+}
 
-        text-align: center;
-        margin: 0 auto;
-        height: 45px;
-        margin-top: 10px;
-        width: 540px;
-    }
+.form input[type="text"]#cvv {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: .5em;
+    box-sizing: border-box;
+}
 
-    input{
-        outline: none;
-    }
+.form input[type="submit"] {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: .5em;
+    box-sizing: border-box;
+}
 
-    #nome, #numero, #cvv, #data, #senha{
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: 3px solid #13747d;
-        background-color: transparent;
-        
-    }
+.form input[type="submit"] {
+    background-color: #1e1e1e;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
 
-    #nome::placeholder, #numero::placeholder, #cvv::placeholder, #data::placeholder, #senha::placeholder{
-        color: aliceblue;
-        font-size: 18px;
-    }
+.form input[type="submit"]:hover {
+    background-color: #333;
+}
 
-
-    #envia {
-        width: 100%;
-        height: 50px;
-        border-radius: 30px;
-        box-shadow: 0 10px 30px -10px black;
-        background-color: #0abfbccb;
-        font-size: 18px;
-        font-family: "Montserrat", sans-serif;
-        border: none;
-        color: white;
-        cursor: pointer;
-    }
-
-    #envia:hover {
-        background-color: #13747d;
-    }
+.DateCVV {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    /* Adicionado para centralizar os itens */
+}

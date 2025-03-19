@@ -63,10 +63,3 @@ cvvInput.addEventListener('input', function() {
     // Remove qualquer caractere que não seja número
     this.value = this.value.replace(/\D/g, '');
 });
-
-const senhaInput = document.getElementById('senha');
-
-senhaInput.addEventListener('input', function() {
-    // Remove qualquer caractere que não seja número
-    this.value = this.value.replace(/\D/g, '');
-});
