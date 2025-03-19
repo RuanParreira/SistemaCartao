@@ -42,17 +42,22 @@ const cardExpirationInput = document.getElementById('data');
 const cardExpirationDisplay = document.getElementById('card-expiration');
 
 cardExpirationInput.addEventListener('input', function() {
-    const inputValue = this.value;
+    let inputValue = this.value.replace(/\D/g, '');
 
-    // Verifica se o valor está preenchido no formato YYYY-MM-DD
-    if (inputValue.length === 10) {
-        const year = inputValue.slice(2, 4); // Pega os dois últimos dígitos do ano
-        const month = inputValue.slice(5, 7); // Pega o mês
+    if (inputValue.length > 4) {
+        inputValue = inputValue.slice(0, 4);
+    }
 
-        // Atualiza a data no cartão
+    if (inputValue.length > 2) {
+        inputValue = `${inputValue.slice(0, 2)}/${inputValue.slice(2)}`;
+    }
+
+    this.value = inputValue;
+
+    if (inputValue.length === 5) { // Considerando o formato MM/AA
+        const [month, year] = inputValue.split('/');
         cardExpirationDisplay.textContent = `${month}/${year}`;
     } else {
-        // Valor padrão se não houver data válida
         cardExpirationDisplay.textContent = '00/00';
     }
 });
